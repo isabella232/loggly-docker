@@ -13,5 +13,6 @@ fi
 sed -i "s/TOKEN/$TOKEN/" /etc/rsyslog.d/50-default.conf
 sed -i "s/TAG/$TAG/" /etc/rsyslog.d/50-default.conf
 
+mkdir -p /var/run/loggly/socket/
 exec /usr/sbin/rsyslogd -n
 
